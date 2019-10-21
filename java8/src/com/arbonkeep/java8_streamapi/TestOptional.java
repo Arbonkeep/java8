@@ -1,7 +1,7 @@
-package com.arbonkeep.java8;
+package com.arbonkeep.java8_streamapi;
 
 import org.junit.Test;
-import com.arbonkeep.java8.Employee.Status;
+import com.arbonkeep.java8_streamapi.Employee.Status;
 import java.util.Optional;
 
 /**

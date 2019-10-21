@@ -1,4 +1,4 @@
-package com.arbonkeep.java8;
+package com.arbonkeep.java8_lambda;
 
 import org.junit.Test;
 
@@ -25,14 +25,14 @@ public class TestLambda2 {
         Runnable r1 = () -> System.out.println("Hello Lambda");
         r1.run();
     }
-    //测试语法格式二
+    //测试语法格式三
     @Test
     public void test2() {
         Consumer<String> con = x ->System.out.println(x);
         con.accept("太好用了");
     }
 
-    //测试语法格式三
+    //测试语法格式四
     @Test
     public void test3() {
         Comparator<Integer> com = (x, y) -> {
@@ -41,7 +41,7 @@ public class TestLambda2 {
         } ;
     }
 
-    //测试语法格式四
+    //测试语法格式五
     @Test
     public void test4() {
         Comparator<Integer> com = (x,y) -> Integer.compare(x,y);

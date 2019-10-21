@@ -1,6 +1,5 @@
-package com.arbonkeep.java8;
+package com.arbonkeep.java8_lambda;
 
-import jdk.nashorn.internal.ir.EmptyNode;
 import org.junit.Test;
 
 import java.util.*;
@@ -92,6 +91,7 @@ public class TestLambda1 {
 
         System.out.println("----------------------");
 
+        //工资作为筛选条件
         List<Employee> emps2 = filterEmployees(this.employees, new MyPredicateImp2());
         for (Employee emp : emps2) {
             System.out.println(emp);
@@ -113,7 +113,7 @@ public class TestLambda1 {
     //优化方式二：匿名内部类
     @Test
     public void Test5() {
-        //此集合存储的是筛选后的值
+        //此集合存储的是筛选后的值（年龄筛选）
         List<Employee> emps = filterEmployees(employees, new MyPredicate<Employee>() {
             @Override
             public boolean test(Employee employee) {
@@ -124,14 +124,34 @@ public class TestLambda1 {
         for (Employee emp : emps) {
             System.out.println(emp);
         }
+
+        System.out.println("----------------------");
+        //工资筛选
+        List<Employee> emps2 = filterEmployees(employees, new MyPredicate<Employee>() {
+            @Override
+            public boolean test(Employee employee) {
+                return employee.getSalary() >= 3500;
+            }
+        });
+
+        for (Employee emp : emps2) {
+            System.out.println(emp);
+        }
+
+
     }
 
     //优化方式三：Lambda表达式
     @Test
     public void Test6() {
-        List<Employee> list = filterEmployees(this.employees, (e) -> e.getAge() >= 30);//通过年龄来筛选
+        //通过年龄来筛选
+        List<Employee> list = filterEmployees(this.employees, (e) -> e.getAge() >= 30);
         list.forEach(System.out::println);//循环遍历
 
+
+        //通过工资来筛选
+        List<Employee> list2 = filterEmployees(this.employees, (e) -> e.getSalary() >=3500 );
+        list2.forEach(System.out::println);
     }
 
     //优化方式四：Stream API

@@ -1,7 +1,6 @@
-package com.arbonkeep.java8;
+package com.arbonkeep.java8_streamapi;
 
-import com.arbonkeep.java8.Employee.Status;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import com.arbonkeep.java8_streamapi.Employee.Status;
 import org.junit.Test;
 
 import java.util.*;

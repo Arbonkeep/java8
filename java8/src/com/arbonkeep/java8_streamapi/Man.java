@@ -1,4 +1,4 @@
-package com.arbonkeep.java8;
+package com.arbonkeep.java8_streamapi;
 
 public class Man {
     private Godness godness;

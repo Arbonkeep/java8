@@ -1,6 +1,6 @@
-package com.arbonkeep.java8;
+package com.arbonkeep.java8_lambda;
 
-public class MyPredicateImp1 implements MyPredicate<Employee>{
+public class MyPredicateImp1 implements MyPredicate<Employee> {
 
     @Override
     public boolean test(Employee employee) {

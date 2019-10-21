@@ -1,6 +1,6 @@
 package com.arbonkeep.test;
 
-import com.arbonkeep.java8.Employee;
+import com.arbonkeep.java8_streamapi.Employee;
 import org.junit.Test;
 
 import java.util.Arrays;
