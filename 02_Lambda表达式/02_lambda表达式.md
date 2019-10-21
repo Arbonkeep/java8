@@ -28,7 +28,7 @@
         * 语法格式四：有两个以上的参数，有返回值，并且Lambda体中有多条语句
             * (参数1,参数2) -> {语句体1;语句体2};
             如：
-                Comparator com -> (x,y) -> {
+                Comparator com = (x,y) -> {
                     System.out.println("函数式接口");
                     return Integer.compare(x,y);
                 }
